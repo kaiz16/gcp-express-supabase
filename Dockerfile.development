@@ -1,0 +1,27 @@
+FROM node:16-alpine3.14 as builder
+LABEL org.opencontainers.image.source https://github.com/kaiz16/gcp-express-supabase
+
+WORKDIR /app
+
+COPY . .
+
+ARG PORT
+ARG DATABASE_URL
+ARG SUPABASE_URL
+ARG SUPABASE_KEY
+ARG SUPABASE_SERVICE_ROLE_KEY
+
+RUN touch .env.development
+RUN echo DATABASE_URL=$DATABASE_URL >> .env.development
+RUN echo SUPABASE_URL=$SUPABASE_URL >> .env.development
+RUN echo SUPABASE_KEY=$SUPABASE_KEY >> .env.development
+RUN echo SUPABASE_SERVICE_ROLE_KEY=$SUPABASE_SERVICE_ROLE_KEY >> .env.development
+RUN cat .env.development
+
+RUN npm install --only=production
+
+ENV HOST 0.0.0.0
+ENV PORT $PORT
+EXPOSE $PORT
+
+CMD [ "npm", "run", "dev" ]

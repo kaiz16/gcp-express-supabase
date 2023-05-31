@@ -1,0 +1,58 @@
+lib-cov
+*.seed
+*.log
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+
+pids
+logs
+results
+tmp
+
+# Build
+public/css/main.css
+
+# Coverage reports
+coverage
+
+
+# local https cert.pem
+https-certs
+*.pem
+
+# Dependency directory
+node_modules
+excel-service/node_modules
+bower_components
+
+# Editors
+.idea
+*.iml
+
+# OS metadata
+.DS_Store
+Thumbs.dbs
+
+# Ignore built ts files
+dist/**/*
+
+# ignore yarn.lock
+yarn.lock
+
+excel-service/.build
+excel-service/.sst
+.build
+.sst
+
+# Supabase
+**/supabase/.branches
+**/supabase/.temp
+
+# Supabase
+**/supabase/.branches
+**/supabase/.temp
+# Supabase
+.supabase

@@ -1,0 +1,31 @@
+{
+  "name": "gcp-express-supabase",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "DEBUG='graphile-build-pg' node src/server.js",
+    "dev": "NODE_ENV=development DEBUG='graphile-build-pg' node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaiz16/gcp-express-supabase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaiz16/gcp-express-supabase/issues"
+  },
+  "homepage": "https://github.com/kaiz16/gcp-express-supabase#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "@graphile-contrib/pg-simplify-inflector": "^6.1.0",
+    "@supabase/supabase-js": "^1.35.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "postgraphile": "^4.12.9",
+    "postgraphile-plugin-connection-filter": "^2.3.0"
+  }
+}
